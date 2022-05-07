@@ -30,18 +30,17 @@ class _HomePageState extends State<HomePage> {
 
   Widget getBody() {
     var size = MediaQuery.of(context).size;
-    return FutureBuilder<SingleChildScrollView>(
-        future: MassService.getAllMass(),
-        builder: (context, snapshot) {
-          print("print Mass next line");
-          print(snapshot.data);
+    return SingleChildScrollView(
+       // builder: (context, snapshot) {
+        ///  print("print Mass next line");
+        //  print(snapshot.data);
         //  print(MassService.getAllMass());
-
-          if (snapshot.hasData) {
-            return ListView.builder(
-                itemCount: 1,
-                itemBuilder: (context, index) {
-                  return SafeArea(
+         // if (snapshot.hasData) {
+          //  print("rasha");
+         //  ListView.builder(
+             //   itemCount: 1,
+               // itemBuilder: (context, index) {
+                  child: SafeArea(
                     child: Padding(
                       padding: const EdgeInsets.all(30),
                       child: Column(
@@ -614,13 +613,17 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                     ),
-                  );
-                });
-          }
+                  )
+               // }
+                //);
+        
+        //  }
           //return CircularProgressIndicator();
+          /*
           else {
             return CircularProgressIndicator();
-          }
-        });
+          }*/
+        //}
+        );
   }
 }

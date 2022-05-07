@@ -10,7 +10,7 @@ class Mass {
       var response = await http.get(Uri.parse(baseUrl));
       if (response.statusCode == 200) {
          //final json = "[" + response.body + "]";
-       // print(json);
+       print(response.body);
         return jsonDecode(response.body)  ;
       } else {
         return Future.error("Server Error");

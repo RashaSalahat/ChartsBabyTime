@@ -31,6 +31,4 @@ var healthSchema = new Schema({
 
 })
 
-
-
-module.exports = mongoose.model('Health', healthSchema)
+module.exports = mongoose.model('HealthWorkout', healthSchema)
